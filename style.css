@@ -24,22 +24,22 @@ background: #F1F9FF;
     border-radius: 10px;
     margin-left: 145px;
     min-width: 400px;
-    width: 1000px;
+    width: 100%;
+    max-width: 800px;
 }
 .teambox__list {
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 16px;
     color: #021B31;
-    counter-reset: soccers;
+    padding: 0 15px 20px 20px;
 }
 .teambox__item{
     margin: 0px;
-    padding: 0 10px 0 20px;
+    padding: 0px;
 }
 .list::before{
-    counter-increment: soccers;
-    content: counter(soccers);
+    
     margin: 0 10px;
     width: 10px;
 }
@@ -53,15 +53,15 @@ background: #F1F9FF;
     justify-content: space-between;
     
 }
-.list__position_left{
+.list__position-left{
     display: flex;
     justify-content: flex-start;
-    width: 600px;
+    width: 50%;
 }
-.list__position_right{
+.list__position-right{
     display: flex;
-    justify-content: space-between;
-    width: 800px;
+    justify-content: flex-end;
+    width: 50%;
 }
 .list__name{
     width: 290px;
@@ -72,16 +72,24 @@ background: #F1F9FF;
 .list__item {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 0;
     width: 250px;
     font-weight: 700;
     color:#525252;
 }
+.list__item_short{
+    width: 130px;
+}
 .trainer{
     width: 200px;
     text-align: right;
-    margin: 0 10px;
+    margin: 0 0 0 19.5px;
+}
+.list__number{
+    width: 30px;
+    
+    text-align: center;
 }
 .list__flag{
     margin: 0 19.5px;
@@ -91,8 +99,8 @@ background: #F1F9FF;
     
 }
 .list__text{
-    width: 60px;
+    width: 70px;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 10px;
+    margin: 0 10px 0 19.5px;
 }
