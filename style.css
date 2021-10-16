@@ -1,6 +1,7 @@
 body{
 background: #F1F9FF;
 }
+/*start teambox*/
 .title{
     font-family: 'Montserrat';
     font-size: 42px;
@@ -104,3 +105,94 @@ background: #F1F9FF;
     text-transform: uppercase;
     margin: 0 10px 0 19.5px;
 }
+/* end teambox */
+/* start weatherbox */
+.weatherbox{
+    width: 240px;
+    height: 320px;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
+    background:url(images/stadion.png) 0 0/cover no-repeat;
+    
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.weatherbox__section{
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    height: 320px;
+    border-radius: 10px;
+}
+.weatherbox__city{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+}
+.weatherbox__section-top{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 20px 20px 0 20px;
+
+}
+.weatherbox__item_right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.weatherbox__cloud{
+    width: 50px;
+}
+.weatherbox__celsius{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 36px;
+    color: #ffffff;
+    padding-top: 5px;
+    width: 80px;
+    height: 40px;
+}
+.weatherbox__section-bottom{
+    margin: 0 20px 20px 20px;
+}
+.weatherbox__line{
+    border: 1px solid #FFFFFF80;
+    width: 200.5px;
+}
+.weatherbox__location{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.weatherbox__icon{
+    width: 20px;
+    height: 20px;
+}
+.weatherbox__people{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.weatherbox__text{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    width: 200px;
+    height: 30px;
+}
+.weatherbox__count{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    width: 80px;
+    text-align: right;
+    margin: 0px;
+}
+/* end weatherbox */
