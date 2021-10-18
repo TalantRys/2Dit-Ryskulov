@@ -1,12 +1,19 @@
 body{
 background: #F1F9FF;
+display: flex;
+justify-content: center;
+}
+.container-right{
+    margin: 50px 0 0 30px;
+}
+.container-right .subtitle{
+    margin-left: 0px;
 }
 /*start teambox*/
 .title{
     font-family: 'Montserrat';
     font-size: 42px;
     font-weight: 700;
-    margin-left: 145px;
     color: #021B31;
 }
 .subtitle{
@@ -16,14 +23,13 @@ background: #F1F9FF;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #C1C1C1;
-    margin: 30px 0 20px 20px;
+    margin: 30px 0 20px 5px;
     
 }
 .teambox{
     background: #FFFFFF;
     border: 1px solid #ECECEC;
     border-radius: 10px;
-    margin-left: 145px;
     min-width: 400px;
     width: 100%;
     max-width: 800px;
@@ -79,6 +85,12 @@ background: #F1F9FF;
     font-weight: 700;
     color:#525252;
 }
+.list__item li{
+    width: 40px;
+}
+.list__item img{
+    padding-left: 3px;
+}
 .list__item_short{
     width: 130px;
 }
@@ -112,10 +124,7 @@ background: #F1F9FF;
     height: 320px;
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
     background:url(images/stadion.png) 0 0/cover no-repeat;
-    
     border-radius: 10px;
-    margin: 10px;
-    
 }
 .weatherbox__section{
     backdrop-filter: blur(3px);
@@ -196,3 +205,55 @@ background: #F1F9FF;
     margin: 0px;
 }
 /* end weatherbox */
+/* start referee-box */
+.referee-box{
+    display: flex;
+    flex-direction: column;
+    height: 860px;
+}
+.referee-box__section{
+    margin-bottom: 20px;
+    width: 240px;
+    height: 120px;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 14px 20px 16px 20px;
+}
+.referee-box__section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.referee-box__section-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-left__text{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 12px;
+    color: #c1c1c1;
+    margin: 0px;
+}
+.section-right__text{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 12px;
+    color: #c1c1c1;
+    text-align: right;
+    margin: 0px;
+}
+.section-left__name{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    color: #021B31;
+    margin: 0px;
+    
+}
+/* end referee-box */
