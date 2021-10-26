@@ -11,7 +11,7 @@ justify-content: center;
 }
 /*start teambox*/
 /* start teambox__nav */
-.teambox__nav{
+.teambox__nav .section{
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #EBEBEB;
@@ -19,7 +19,7 @@ justify-content: center;
     display: flex;
     position: relative;
 }
-.teambox__nav img{
+.teambox__nav label img{
     width: 28px;
     height: 28px;
     margin: 0 15px 0 0;
@@ -28,7 +28,7 @@ justify-content: center;
     display: none;
 }
 
-label{
+.section label{
     width: 50%;
     display: flex;
     justify-content: flex-start;
@@ -43,7 +43,7 @@ label{
     z-index: 1;
     transition: all 0.5s ease-in-out;
 }
-label:hover{
+.section label:hover{
     background: radial-gradient(50.14% 92.5% at 49.86% 92.5%,
      rgba(10, 139, 255, 0.17) 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -56,18 +56,16 @@ label:hover{
     z-index: 0;
     transition: all 0.5s ease-in-out;
 }
-.teambox__list{
-    display: none;
-}
+
 #dinamo:checked ~ .teambox__list-1,
 #tver:checked ~ .teambox__list-2{
-    display: flex;
+    display: block;
 }
-#dinamo:checked ~ .dinamo,
-#tver:checked ~ .tver{
+#dinamo:checked ~ .section .dinamo,
+#tver:checked ~ .section .tver{
     color: #184272;
 }
-#tver:checked ~ .teambox__slider{
+#tver:checked ~ .section .teambox__slider{
     left: 50%;
 }
 /* end teambox__nav */
@@ -101,6 +99,7 @@ label:hover{
     font-size: 16px;
     color: #021B31;
     padding: 0 15px 20px 20px;
+    display: none;
 }
 .teambox__item{
     margin: 0px;
