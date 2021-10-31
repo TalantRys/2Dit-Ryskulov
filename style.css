@@ -1,8 +1,29 @@
 body{
-background: #F1F9FF;
-display: flex;
-justify-content: center;
+    background: #F1F9FF;
 }
+
+@media (max-width:992px) {
+    .container{
+        width: 850px;
+    }
+}
+@media (max-width:767px) {
+    .container{
+        width: 650px;
+        flex-direction: column;
+    }
+}
+@media (max-width:575px) {
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+
 .container-right{
     margin: 50px 0 0 30px;
 }
@@ -11,7 +32,7 @@ justify-content: center;
 }
 /*start teambox*/
 /* start teambox__nav */
-.teambox__nav .section{
+.teambox__nav {
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #EBEBEB;
@@ -28,7 +49,7 @@ justify-content: center;
     display: none;
 }
 
-.section label{
+.teambox__nav label{
     width: 50%;
     display: flex;
     justify-content: flex-start;
@@ -43,29 +64,30 @@ justify-content: center;
     z-index: 1;
     transition: all 0.5s ease-in-out;
 }
-.section label:hover{
+.teambox__nav label:hover{
     background: radial-gradient(50.14% 92.5% at 49.86% 92.5%,
      rgba(10, 139, 255, 0.17) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .teambox__slider{
     border-bottom: 2px solid #0A8BFF;
     position: absolute;
-    width: 50%;
+    width: 45%;
     height: 49px;
     left:0;
     z-index: 0;
     transition: all 0.5s ease-in-out;
+    margin-left: 28px;
 }
 
 #dinamo:checked ~ .teambox__list-1,
 #tver:checked ~ .teambox__list-2{
     display: block;
 }
-#dinamo:checked ~ .section .dinamo,
-#tver:checked ~ .section .tver{
+#dinamo:checked ~ .teambox__nav .dinamo,
+#tver:checked ~ .teambox__nav .tver{
     color: #184272;
 }
-#tver:checked ~ .section .teambox__slider{
+#tver:checked ~ .teambox__nav .teambox__slider{
     left: 50%;
 }
 /* end teambox__nav */
@@ -75,9 +97,14 @@ justify-content: center;
     font-weight: 700;
     color: #021B31;
 }
+@media (max-width:575px){
+    .title{
+        font-size: 28px;
+    }
+}
 .subtitle{
     font-family: 'Montserrat';
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -85,13 +112,17 @@ justify-content: center;
     margin: 30px 0 20px 5px;
     
 }
+@media (max-width:575px){
+    .subtitle{
+        font-size: 12px;
+        margin: 20px 0 10px 5px;
+    }
+}
 .teambox{
     background: #FFFFFF;
     border: 1px solid #ECECEC;
     border-radius: 10px;
-    min-width: 400px;
-    width: 100%;
-    max-width: 800px;
+    width: 800px;
 }
 .teambox__list {
     font-family: 'Montserrat';
@@ -101,12 +132,16 @@ justify-content: center;
     padding: 0 15px 20px 20px;
     display: none;
 }
+@media (max-width:575px) {
+    .teambox__list{
+        font-size: 14px;
+    }
+}
 .teambox__item{
     margin: 0px;
     padding: 0px;
 }
 .list::before{
-    
     margin: 0 10px;
     width: 10px;
 }
@@ -114,24 +149,47 @@ justify-content: center;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px;
+    height: 45px;
     background: #F8F8F8;
     border-radius: 5px;
     justify-content: space-between;
-    
+    padding: 0 10px 0 10px;
+}
+@media (max-width:575px) {
+    .list{
+        flex-direction: column;
+        height: 120px;
+    }
 }
 .list__position-left{
     display: flex;
     justify-content: flex-start;
     width: 50%;
 }
+@media (max-width:575px) {
+    .list__position-left{
+        justify-content: center;
+    }
+}
 .list__position-right{
     display: flex;
     justify-content: flex-end;
     width: 50%;
 }
+@media (max-width:575px) {
+    .list__position-right{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 .list__name{
     width: 290px;
+}
+.list__tag{
+    color: #47a8ff;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 0 19.5px;
 }
 .list:nth-child(even){
     background-color: white;
@@ -142,11 +200,20 @@ justify-content: center;
     justify-content: space-evenly;
     padding: 0;
     width: 250px;
+    line-height: 175%;
+    font-size: 14px;
     font-weight: 700;
     color:#525252;
 }
+@media (max-width:575px) {
+    .list__item{
+
+    }
+}
 .list__item li{
     width: 40px;
+    display: inherit;
+    align-items: center;
 }
 .list__item img{
     padding-left: 3px;
@@ -166,16 +233,19 @@ justify-content: center;
 }
 .list__flag{
     margin: 0 19.5px;
-    border: 1px solid #c4c4c4;
-    border-radius:100px;
     box-sizing: border-box;
-    
+    width: 20px;
+}
+@media (max-width:575px) {
+    .list__flag{
+
+    }
 }
 .list__text{
     width: 70px;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 10px 0 19.5px;
+    margin: 0 0 0 19.5px;
 }
 /* end teambox */
 /* start weatherbox */
