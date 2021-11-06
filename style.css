@@ -250,19 +250,29 @@ body{
     display: none;
 }
 .teambox__list-1{
-    animation: teambox__list-1 0.5s ease-out;   
+    animation: teambox__list-1 1s ease;   
 }
 .teambox__list-2{
-    animation: teambox__list-2 0.5s ease-out;   
+    animation: teambox__list-2 1s ease;   
 }
 @keyframes teambox__list-1 {
     from{
         transform: translateX(-800px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 @keyframes teambox__list-2 {
     from{
         transform: translateX(800px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 @media (max-width:797px) {
