@@ -13,7 +13,6 @@ body{
 }
 @media (max-width:992px) {
     .container{
-        
         margin: 0 auto;
         flex-direction: column;
     }
@@ -34,9 +33,6 @@ body{
     display: flex;
     justify-content: center;
     margin: 0 0 10px 0;
-}
-.teambox__container{
-
 }
 @media (max-width:1073px) {
     .teambox__container{
@@ -231,17 +227,7 @@ body{
     border: 1px solid #ECECEC;
     border-radius: 10px;
     width: 800px;
-    
-}
-@media (max-width:1073px) {
-    .teambox{
-
-    }
-}
-@media (max-width:992px) {
-    .teambox{
-        
-    }
+    overflow: hidden;
 }
 @media (max-width:797px) {
     .teambox{
@@ -263,6 +249,22 @@ body{
     padding: 0 15px 20px 20px;
     display: none;
 }
+.teambox__list-1{
+    animation: teambox__list-1 0.5s ease-out;   
+}
+.teambox__list-2{
+    animation: teambox__list-2 0.5s ease-out;   
+}
+@keyframes teambox__list-1 {
+    from{
+        transform: translateX(-800px);
+    }
+}
+@keyframes teambox__list-2 {
+    from{
+        transform: translateX(800px);
+    }
+}
 @media (max-width:797px) {
     .teambox__list{
         font-size: 14px;
@@ -279,9 +281,6 @@ body{
     .teambox__list{
         font-size: 12px;
     }
-}
-.teambox__item{
-    
 }
 .list{
     display: flex;
@@ -498,9 +497,7 @@ body{
 }
 /* end weatherbox */
 /* start referee-box */
-.referee-box__container{
-    
-}
+
 .referee-box{
     display: flex;
     flex-direction: column;
@@ -514,16 +511,6 @@ body{
 @media (max-width:992px) {
     .referee-box{
         flex-direction: column;
-    }
-}
-@media (max-width:797px) {
-    .referee-box{
-        
-    }
-}
-@media (max-width:575px) {
-    .referee-box{
-        
     }
 }
 .referee-box__section{
